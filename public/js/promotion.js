@@ -17,7 +17,7 @@ new Vue({
     formErrors:{},
     formErrorsUpdate:{},
     newPromotion : {'title':'','description':''},
-    fillPromotion : {'title':'','description':'','id':''}
+    fillPromotion : {'title':'','description':'','expired_date':'','id':''}
   },
 
   computed: {
@@ -81,6 +81,7 @@ new Vue({
           this.fillPromotion.title = promotion.title;
           this.fillPromotion.id = promotion.id;
           this.fillPromotion.description = promotion.description;
+          this.fillPromotion.expired_date = promotion.expired_date;
           $("#edit-promotion").modal('show');
       },
 
@@ -88,7 +89,7 @@ new Vue({
         var input = this.fillPromotion;
         this.$http.put('/vuepromotions/'+id,input).then((response) => {
             this.changePage(this.pagination.current_page);
-            this.fillPromotion = {'title':'','description':'','id':''};
+            this.fillPromotion = {'title':'','description':'','expired_date':'','id':''};
             $("#edit-promotion").modal('hide');
             toastr.success('Promotion Updated Successfully.', 'Success Alert', {timeOut: 5000});
           }, (response) => {
