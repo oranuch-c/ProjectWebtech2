@@ -77,7 +77,7 @@ class BookController extends Controller
         ];
     }
 
-    public function albums($id)
+    public function books($id)
     {
         $category = \App\Category::find($id);
         if (!is_null($category)) {

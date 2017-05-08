@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 Route::get('categories', 'BookController@index');
 Route::get('titles', 'TitleController@index');
+Route::get('search', 'TitleController@search');
+Route::get('search/{id}', 'BookController@show');

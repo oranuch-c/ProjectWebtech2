@@ -62,7 +62,7 @@ class TitleController extends Controller
             ];
         return [
             'success' => false,
-            'data' => 'Singer not found'
+            'data' => 'Book not found'
         ];
     }
 

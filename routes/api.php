@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::get('book', 'Api\BookController@index');
+Route::get('book/{id}/titles', 'Api\BookController@books');
 // Route::get('titles', 'Api\TitleController@index');
 Route::resource('book', 'Api\BookController');
 Route::resource('titles', 'Api\TitleController');
