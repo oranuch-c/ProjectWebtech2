@@ -15,7 +15,11 @@ class CreateBookTable extends Migration
     {
         Schema::create('books', function (Blueprint $table) {
             $table->increments('book_id');
+<<<<<<< HEAD
             $table->string('name');
+=======
+            $table->string('book_name');
+>>>>>>> origin/master
             $table->integer('category_id')->unsigned();
             $table->string('status');
             $table->double('price', 7, 2);
@@ -41,7 +45,6 @@ class CreateBookTable extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('titles');
-        Schema::enableForeignKeyConstraints();
+        Schema::dropIfExists('books');
     }
 }

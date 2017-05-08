@@ -21,3 +21,4 @@ Route::get('book/{id}/titles', 'Api\BookController@books');
 // Route::get('titles', 'Api\TitleController@index');
 Route::resource('book', 'Api\BookController');
 Route::resource('titles', 'Api\TitleController');
+Route::resource('borrow', 'Api\BorrowController');
