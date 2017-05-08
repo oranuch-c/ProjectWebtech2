@@ -57,6 +57,7 @@ Route::get('master',function(){
   return view('layouts.master');
 });
 
+Route::get('/profile', 'UserController@index');
 // Route::get('/home', 'HomeController@index');
 
 Auth::routes();
