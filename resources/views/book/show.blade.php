@@ -1,12 +1,20 @@
 @extends('layouts.master')
 
 @section('content')
-<h1 class="title">All Books</h1>
+<h1 class="title">Recommended books</h1>
 <div class="row">
-
-
-    <div class="col-md-12">
-        <div class="panel panel-default" id="vue-app-titles">
+<!--     <div class="col-md-6">
+        <div class="panel panel-default" id="json-beautifier">
+            <div class="panel-heading">
+                JSON Response
+            </div>
+            <div class="panel-body">
+                <pre>@{{json}}</pre>
+            </div>
+        </div>
+    </div> -->
+    <div class="col-md-6">
+        <div class="panel panel-default" id="vue-app-singers">
             <div class="panel-heading">
                 Data Render By VueJS
             </div>
@@ -24,7 +32,6 @@
                         <th>Year</th>
                         <th>Page</th>
                         <th>Publish Company</th>
-                        <th>Image</th>
                         
                     </tr>
                 </thead>
@@ -38,30 +45,13 @@
                         <td>@{{ d.year }}</td>
                         <td>@{{ d.pageSize }}</td>
                         <td>@{{ d.publishComp }}</td>
-                        <!-- <td>@{{<img src="../storage/app/img/">d.img}} </td> -->
-                        <td><img src="../storage/app/img/@{{d.img}}" /></td>
-                        <!-- <td><img v-bind:src=@{{img}}></td> -->
-                        <!-- <td>@{{d.img}}</td> -->
-                        <!-- <td>@{{v-bind:src="../ProjectWebtech2/storage/app/img/.img"}}</td> -->
-
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-md-6">
-        <div class="panel panel-default" id="json-beautifier">
-            <div class="panel-heading">
-                JSON Response
-            </div>
-            <div class="panel-body">
-                <pre>@{{json}}</pre>
-            </div>
-        </div>
-    </div>
-
+<!-- <div class="row">
     <div class="col-md-6">
         <div class="panel panel-default" id="vue-app">
             <div class="panel-heading">
@@ -70,43 +60,30 @@
             <div class="panel-body">
                 <p>Status Code: {{ $statusCode }}</p>
                 <p>Response Header: {{ $responseHeader }}</p>
-                Success <label class="label label-success">{{ $success }}</label>
+                Success: <label class="label label-success">{{ $success }}</label>
+                @if (!$success)
+                    {{ $data }}
+                @endif
             </div>
+            @if ($success)
             <table class="table">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Status</th>
-                        <th>Price</th>
-                        <th>Author</th>
-                        <th>Year</th>
-                        <th>Page</th>
-                        <th>Publish Company</th>
+                        <td>{{ $data->id }}</td>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($data as $d)
                     <tr>
-                        <td>{{ $d->id }}</td>
-                        <td>
-                            {{ $d->name }}
-                        </td>
-                        <td>{{ $d->status }}</td>
-                        <td>{{ $d->price }}</td>
-                        <td>{{ $d->author }}</td>
-                        <td>{{ $d->year }}</td>
-                        <td>{{ $d->pageSize }}</td>
-                        <td>{{ $d->publishComp }}</td>
+                        <th>Name</th>
+                        <td>{{ $data->name }}</td>
                     </tr>
-                    @endforeach
                 </tbody>
             </table>
+            @endif
         </div>
     </div>
-
-</div>
-
+</div> -->
 @endsection
 
 @section('script')
@@ -123,7 +100,7 @@
     });
 
     var vm = new Vue({
-        el: '#vue-app-titles',
+        el: '#vue-app-singers',
         data: data
     });
 </script>

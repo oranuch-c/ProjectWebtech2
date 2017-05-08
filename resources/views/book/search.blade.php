@@ -3,7 +3,7 @@
 @section('content')
 <h1>Search Book</h1>
 <div class="" id="vue-app">
-
+<div class="row">
     <div class="col-md-12">
         <div class="form-group">
             <label for="name">Book Name</label>
@@ -12,6 +12,9 @@
 
         <button class="btn btn-primary" v-on:click="submit()">Search</button>
     </div>
+</div>
+
+
 
 <div class="row">
     <div class="col-md-12">

@@ -62,7 +62,7 @@
                     @foreach ($data as $d)
                     <tr>
                         <td>{{ $d->id }}</td>
-                        <td><a href="{{url("/categories/{$d->id}")}}">
+                        <td><a href="{{url("/titles/{$d->id}")}}">
                             {{ $d->name }}
                         </a></td>
                     </tr>
