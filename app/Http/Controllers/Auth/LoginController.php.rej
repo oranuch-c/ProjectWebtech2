@@ -1,0 +1,9 @@
+diff a/app/Http/Controllers/Auth/LoginController.php b/app/Http/Controllers/Auth/LoginController.php	(rejected hunks)
+@@ -34,7 +34,6 @@
+      */
+     public function __construct()
+     {
+-        $this->middleware('guest')->except('logout');
+       $this->middleware('guest', ['except' => 'logout']);//guest accept ตัวที่ login เข้ามาแล้ว
+ 
+     }
