@@ -54,8 +54,7 @@ class RegisterController extends Controller
             'tel' => 'required|string|max:10',
             'birthdate' => 'required|date',
             'address' => 'required|string',
-            'point' => '',
-            'type' => '',
+            'type' => 'required',
 
 
 
@@ -75,8 +74,9 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'tel' => $data['tel'],
-
-
+            'birthdate' => $data['birthdate'],
+            'address' => $data['address'],
+            'type' => $data['type'],
 
 
         ]);
