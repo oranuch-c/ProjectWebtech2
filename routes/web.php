@@ -23,6 +23,10 @@ Route::get('login', function () {
     return view('/login');
 });
 
+Route::get('borrow', function () {
+    return view('/borrow');
+});
+
 Route::get('contact', function () {
     return view('/contact');
 });
