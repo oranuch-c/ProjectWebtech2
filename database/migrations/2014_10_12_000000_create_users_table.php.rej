@@ -1,0 +1,14 @@
+diff a/database/migrations/2014_10_12_000000_create_users_table.php b/database/migrations/2014_10_12_000000_create_users_table.php	(rejected hunks)
+@@ -18,10 +18,10 @@
+             $table->string('name');
+             $table->string('email')->unique();
+             $table->string('password');
+-            $table->string('tel');
++            $table->string('tel',10);
+             $table->date('birthdate');
+             $table->string('address');
+-            $table->Integer('point');
++            $table->bigInteger('point');
+             $table->string('type');
+             $table->rememberToken();
+             $table->timestamps();
