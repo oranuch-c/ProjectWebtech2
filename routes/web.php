@@ -12,8 +12,63 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('index');
 });
+
+Route::get('register', function () {
+    return view('/register');
+});
+
+Route::get('login', function () {
+    return view('/login');
+});
+
+Route::get('borrow', function () {
+    return view('/borrow');
+});
+
+Route::get('contact', function () {
+    return view('/contact');
+});
+
+Route::get('index', function () {
+    return view('/index');
+});
+
+Route::get('product_details', function () {
+    return view('/product_details');
+});
+
+Route::get('products', function () {
+    return view('/products');
+});
+
+Route::get('special_offer', function () {
+    return view('/special_offer');
+});
+
+Route::get('components', function () {
+    return view('/components');
+});
+
+
+
+Route::get('master',function(){
+  return view('layouts.master');
+});
+
+// Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+Route::get('/info', 'InfoController@index');
+Route::get('/info', function () {
+  						$books = ['book1', 'book2', 'book3', 'book4', 'book5'];
+   						 return view('info',compact('books'));
+});
+
+Route::get('manage-vue', 'VuePromotionController@manageVue');
+Route::resource('vuepromotions','VuePromotionController');
+
 
 Route::get('all', function () {
     return view('book.show');
