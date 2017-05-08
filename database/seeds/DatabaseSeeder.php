@@ -26,7 +26,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'25 เม.ย. 2560',
                     'pageSize' =>"90 หน้า",
-                    'publishComp' =>'เข็มเขียน'
+                    'publishComp' =>'เข็มเขียน',
+                    'img' =>'1.jpg'
                 ]),
 
                             new App\Title([
@@ -36,7 +37,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'16 ก.พ. 2560',
                     'pageSize' =>"426 หน้า",
-                    'publishComp' =>'นานมีบุ๊คส์ จำกัด'
+                    'publishComp' =>'นานมีบุ๊คส์ จำกัด',
+                    'img' =>'2.jpg'
                 ]),
 
                             new App\Title([
@@ -46,7 +48,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"ล. วิลิศมาหรา",
                     'year' =>'6 ก.ค. 2558',
                     'pageSize' =>"75 หน้า",
-                    'publishComp' =>'ล. วิลิศมาหรา'
+                    'publishComp' =>'ล. วิลิศมาหรา',
+                    'img' =>'3.png'
                 ]),
                             new App\Title([
                     'name' => "แดนรักมาเฟียเถื่อน",
@@ -55,7 +58,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'5 พ.ค. 2560',
                     'pageSize' =>"364 หน้า",
-                    'publishComp' =>'วรัมพร'
+                    'publishComp' =>'วรัมพร',
+                    'img' =>'4.jpg'
                 ]),
                             new App\Title([
                     'name' => "พระพรหมแสนซน",
@@ -64,7 +68,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'24 ม.ค. 2560',
                     'pageSize' =>"603 หน้า",
-                    'publishComp' =>'รัชนีกานต์'
+                    'publishComp' =>'รัชนีกานต์',
+                    'img' =>'5.jpg'
                 ]),
                             new App\Title([
                     'name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย2",
@@ -73,7 +78,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"ล. วิลิศมาหรา",
                     'year' =>'6 ก.ค. 2558',
                     'pageSize' =>"50 หน้า",
-                    'publishComp' =>'ล. วิลิศมาหรา'
+                    'publishComp' =>'ล. วิลิศมาหรา',
+                    'img' =>'6.png'
                 ]),
                             new App\Title([
                     'name' => "เรื่องของฟ้าวลี สาวน้อยบนตึก",
@@ -82,7 +88,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'16 ม.ค. 2560',
                     'pageSize' =>"169 หน้า",
-                    'publishComp' =>'บ้านวารสาร'
+                    'publishComp' =>'บ้านวารสาร',
+                    'img' =>'7.jpg'
                 ]),
                             new App\Title([
                     'name' => "บัญชารักเทพบุตรเถื่อน",
@@ -91,7 +98,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'5 พ.ค. 2560',
                     'pageSize' =>"447 หน้า",
-                    'publishComp' =>'วรัมพร'
+                    'publishComp' =>'วรัมพร',
+                    'img' =>'8.jpg'
                 ]),
                             new App\Title([
                     'name' => "สงครามลิขิตรัก",
@@ -100,7 +108,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"ธุวดารา",
                     'year' =>'4 พ.ค. 2560',
                     'pageSize' =>"468 หน้า",
-                    'publishComp' =>'ลัลล์ลลิล'
+                    'publishComp' =>'ลัลล์ลลิล',
+                    'img' =>'9.jpg'
                 ]),
                             new App\Title([
                     'name' => "ซีรี่ย์รักชุด อสูรปองรัก",
@@ -109,7 +118,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"คีตะธารา",
                     'year' =>'2 พ.ค. 2560',
                     'pageSize' =>"189 หน้า",
-                    'publishComp' =>'-'
+                    'publishComp' =>'-',
+                    'img' =>'10.jpg'
                 ]),
                             new App\Title([
                     'name' => "ภูผาไอยรา",
@@ -118,7 +128,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"ธุวดารา",
                     'year' =>'1 พ.ค. 2560',
                     'pageSize' =>"225 หน้า",
-                    'publishComp' =>'ลัลล์ลลิล'
+                    'publishComp' =>'ลัลล์ลลิล',
+                    'img' =>'11.jpg'
                 ]),
                             new App\Title([
                     'name' => "กลลวงจอมพยัคฆ์",
@@ -127,7 +138,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"นรีรัตน์",
                     'year' =>'6 เม.ย. 2560',
                     'pageSize' =>"457 หน้า",
-                    'publishComp' =>'-'
+                    'publishComp' =>'-',
+                    'img' =>'12.jpg'
                 ]),
                             new App\Title([
                     'name' => "เนเมียวสีหบดี",
@@ -136,7 +148,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"กุดารัศมี",
                     'year' =>'25 เม.ย. 2560',
                     'pageSize' =>"189 หน้า",
-                    'publishComp' =>'กุดารัศมี'
+                    'publishComp' =>'กุดารัศมี',
+                    'img' =>'13.jpg'
                 ]),
 
             ]);
@@ -154,7 +167,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'27 เม.ย. 2560',
                     'pageSize' =>"143 หน้า",
-                    'publishComp' =>'เคหะการเกษตร'
+                    'publishComp' =>'เคหะการเกษตร',
+                    'img' =>'14.jpg'
                 ]),
 
                             new App\Title([
@@ -164,7 +178,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'27 ก.พ. 2560',
                     'pageSize' =>"45 หน้า",
-                    'publishComp' =>'อิม'
+                    'publishComp' =>'อิม',
+                    'img' =>'15.jpg'
                 ]),
 
                             new App\Title([
@@ -174,7 +189,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'5 ก.ค. 2559',
                     'pageSize' =>"44 หน้า",
-                    'publishComp' =>'เมลโล่'
+                    'publishComp' =>'เมลโล่',
+                    'img' =>'16.jpg'
                 ]),
                             new App\Title([
                     'name' => "หมอชาวบ้าน พฤษภาคม 2560 Vol.457",
@@ -183,7 +199,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'28 เม.ย. 2560',
                     'pageSize' =>"95 หน้า",
-                    'publishComp' =>'สำนักพิมพ์หมอชาวบ้าน'
+                    'publishComp' =>'สำนักพิมพ์หมอชาวบ้าน',
+                    'img' =>'17.jpg'
                 ]),
                             new App\Title([
                     'name' => "SciMag ฉบับสิงหาคม 2559",
@@ -192,7 +209,8 @@ class DatabaseSeeder extends Seeder
                     'author' =>"-",
                     'year' =>'4 ส.ค. 2559',
                     'pageSize' =>"42 หน้า",
-                    'publishComp' =>'ซายแมก'
+                    'publishComp' =>'ซายแมก',
+                    'img' =>'18.jpg'
 
             ]),
         ]);
