@@ -1,0 +1,9 @@
+diff a/database/migrations/2017_04_24_190308_create_category_table.php b/database/migrations/2017_04_24_190308_create_category_table.php	(rejected hunks)
+@@ -14,7 +14,6 @@
+     public function up()
+     {
+         Schema::create('categories', function (Blueprint $table) {
+-            $table->increments('id');
+             $table->increments('category_id');
+             $table->string('name');
+             $table->timestamps();
