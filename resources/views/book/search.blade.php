@@ -40,8 +40,8 @@
                 </thead>
                 <tbody>
                     <tr v-for="d in data">
-                        <td>@{{ d.id }}</td>
-                        <td>@{{ d.name }}</td>
+                        <td>@{{ d.book_id }}</td>
+                        <td>@{{ d.book_name }}</td>
                         <td>@{{ d.status }}</td>
                         <td>@{{ d.price }}</td>
                         <td>@{{ d.author }}</td>
