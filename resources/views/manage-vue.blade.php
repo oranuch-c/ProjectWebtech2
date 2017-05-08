@@ -15,7 +15,7 @@
 
 		<div class="row">
 		    <div class="col-lg-12 margin-tb">
-		        <div class="text-center">
+		        <div class="span12 pagination-centered">
 		            <h2>Promotion</h2>
 		        </div>
 		        <div class="pull-right">
