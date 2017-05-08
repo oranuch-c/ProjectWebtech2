@@ -4,38 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Promotion;
+use Illuminate\Support\Facades\DB;
 
 class BorrowController extends Controller
 {
-
-    public function manageVue()
-    {
-        return view('manage-vue');
-    }
-
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $promotion = Promotion::latest()->paginate(5);
+        //
+    }
 
-        $response = [
-            'pagination' => [
-                'total' => $promotion->total(),
-                'per_page' => $promotion->perPage(),
-                'current_page' => $promotion->currentPage(),
-                'last_page' => $promotion->lastPage(),
-                'from' => $promotion->firstItem(),
-                'to' => $promotion->lastItem()
-            ],
-            'data' => $promotion
-        ];
-
-        return response()->json($response);
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
     }
 
     /**
@@ -46,15 +36,37 @@ class BorrowController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'title' => 'required',
-            'description' => 'required',
-            'expired_date' => 'required'
-        ]);
+        //
+    }
 
-        $create = Promotion::create($request->all());
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show()
+    {
+      $loan = DB::table('user_books')
+      ->join('cart','user_books.cart_id', '=','cart.cart_id')
+      ->select('user_books.user_id','user_books.book_id', 'cart.loan_date', 'cart.returned_date','cart.total')
+      ->get();
+      return view('borrow',[
+        'loan' => $loan
 
-        return response()->json($create);
+      ]);
+    //]);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
     }
 
     /**
@@ -66,15 +78,7 @@ class BorrowController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request, [
-            'title' => 'required',
-            'description' => 'required',
-            'expired_date' => 'required'
-        ]);
-
-        $edit = Promotion::find($id)->update($request->all());
-
-        return response()->json($edit);
+        //
     }
 
     /**
@@ -85,7 +89,6 @@ class BorrowController extends Controller
      */
     public function destroy($id)
     {
-        Promotion::find($id)->delete();
-        return response()->json(['done']);
+        //
     }
 }
