@@ -4,15 +4,52 @@
 <h1>Search Book</h1>
 <div class="" id="vue-app">
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-4">
         <div class="form-group">
             <label for="name">Book Name</label>
             <input type="text" class="form-control" v-model="name" id="name" placeholder="Book Name">
-        </div>
 
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    ค้นหา
+            <span class="caret"></span>
+            </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li><a href="http://projectwebtech2.dev/api/titles/รักเปื้อนร้าย">ชื่อหนังสือ</a></li>
+        <li><a href="#">หมวดหมู่</a></li>
+        <li><a href="#">ชื่อผู้แต่ง</a></li>
+        </ul>
         <button class="btn btn-primary" v-on:click="submit()">Search</button>
     </div>
+
+    </div>
+        </div>
+ 
+
+
+       
+    
 </div>
+
+<!-- <div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" v-model="name" id="name" placeholder="Book Name">
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+      <button class="btn btn-primary" v-on:click="submit()">Search</button>
+    </div>
+        </div>
+    </div>
+</div> -->
 
 
 
@@ -79,5 +116,7 @@ var vm = new Vue({
         }
     }
 });
+
+$('.dropdown-toggle').dropdown()
 </script>
 @endsection
