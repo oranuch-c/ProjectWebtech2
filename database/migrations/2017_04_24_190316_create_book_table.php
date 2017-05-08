@@ -16,7 +16,6 @@ class CreateBookTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->increments('book_id');
             $table->string('book_name');
-            $table->integer('category_id')->unsigned();
             $table->string('status');
             $table->double('price', 7, 2);
             $table->string('author');
@@ -24,6 +23,7 @@ class CreateBookTable extends Migration
             $table->string('pageSize');
             $table->string('publishComp');
             $table->string('img');
+            $table->integer('category_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
 

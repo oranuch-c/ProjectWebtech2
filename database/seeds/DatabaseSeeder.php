@@ -11,17 +11,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        App\Category::create(['name' => 'การ์ตูน']);
-    	App\Category::create(['name' => 'วรรณกรรม นวนิยาย']);
-        App\Category::create(['name' => 'นิตยสาร']);
-        App\Category::create(['name' => 'หนังสือต่างประเทศ']);
+        App\Category::create(['category_name' => 'การ์ตูน']);
+        App\Category::create(['category_name' => 'วรรณกรรม นวนิยาย']);
+        App\Category::create(['category_name' => 'นิตยสาร']);
+        App\Category::create(['category_name' => 'หนังสือต่างประเทศ']);
 
 
-        $category = App\Category::where('name', '=', 'วรรณกรรม นวนิยาย')->first();
+        $category = App\Category::where('category_name', '=', 'วรรณกรรม นวนิยาย')->first();
         if (!is_null($category)) {
             $category->books()->saveMany([
-                           	new App\Title([
-                    'name' => "รักเปื้อนร้าย",
+                            new App\Book([
+                    'book_name' => "รักเปื้อนร้าย",
                     'status' => "available",
                     'price' => 50.00,
                     'author' =>"-",
@@ -31,8 +31,8 @@ class DatabaseSeeder extends Seeder
                     'img' =>'1.jpg'
                 ]),
 
-                            new App\Title([
-                    'name' => "เจาะจิตฆาตกร เล่ม 1 ตอน ผ่าปมวิปริต",
+                            new App\Book([
+                    'book_name' => "เจาะจิตฆาตกร เล่ม 1 ตอน ผ่าปมวิปริต",
                     'status' => "available",
                     'price' => 295.00,
                     'author' =>"-",
@@ -42,8 +42,8 @@ class DatabaseSeeder extends Seeder
                     'img' =>'2.jpg'
                 ]),
 
-                            new App\Title([
-                    'name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย",
+                            new App\Book([
+                    'book_name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย",
                     'status' => "available",
                     'price' => 50.00,
                     'author' =>"ล. วิลิศมาหรา",
@@ -52,8 +52,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'ล. วิลิศมาหรา',
                     'img' =>'3.png'
                 ]),
-                            new App\Title([
-                    'name' => "แดนรักมาเฟียเถื่อน",
+                            new App\Book([
+                    'book_name' => "แดนรักมาเฟียเถื่อน",
                     'status' => "available",
                     'price' => 279.00,
                     'author' =>"-",
@@ -62,8 +62,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'วรัมพร',
                     'img' =>'4.jpg'
                 ]),
-                            new App\Title([
-                    'name' => "พระพรหมแสนซน",
+                            new App\Book([
+                    'book_name' => "พระพรหมแสนซน",
                     'status' => "available",
                     'price' => 250.00,
                     'author' =>"-",
@@ -72,8 +72,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'รัชนีกานต์',
                     'img' =>'5.jpg'
                 ]),
-                            new App\Title([
-                    'name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย2",
+                            new App\Book([
+                    'book_name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย2",
                     'status' => "available",
                     'price' => 50.00,
                     'author' =>"ล. วิลิศมาหรา",
@@ -82,8 +82,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'ล. วิลิศมาหรา',
                     'img' =>'6.png'
                 ]),
-                            new App\Title([
-                    'name' => "เรื่องของฟ้าวลี สาวน้อยบนตึก",
+                            new App\Book([
+                    'book_name' => "เรื่องของฟ้าวลี สาวน้อยบนตึก",
                     'status' => "available",
                     'price' => 50.00,
                     'author' =>"-",
@@ -92,8 +92,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'บ้านวารสาร',
                     'img' =>'7.jpg'
                 ]),
-                            new App\Title([
-                    'name' => "บัญชารักเทพบุตรเถื่อน",
+                            new App\Book([
+                    'book_name' => "บัญชารักเทพบุตรเถื่อน",
                     'status' => "available",
                     'price' => 289.00,
                     'author' =>"-",
@@ -102,8 +102,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'วรัมพร',
                     'img' =>'8.jpg'
                 ]),
-                            new App\Title([
-                    'name' => "สงครามลิขิตรัก",
+                            new App\Book([
+                    'book_name' => "สงครามลิขิตรัก",
                     'status' => "available",
                     'price' => 350.00,
                     'author' =>"ธุวดารา",
@@ -112,8 +112,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'ลัลล์ลลิล',
                     'img' =>'9.jpg'
                 ]),
-                            new App\Title([
-                    'name' => "ซีรี่ย์รักชุด อสูรปองรัก",
+                            new App\Book([
+                    'book_name' => "ซีรี่ย์รักชุด อสูรปองรัก",
                     'status' => "available",
                     'price' => 99.00,
                     'author' =>"คีตะธารา",
@@ -122,8 +122,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'-',
                     'img' =>'10.jpg'
                 ]),
-                            new App\Title([
-                    'name' => "ภูผาไอยรา",
+                            new App\Book([
+                    'book_name' => "ภูผาไอยรา",
                     'status' => "available",
                     'price' => 150.00,
                     'author' =>"ธุวดารา",
@@ -132,8 +132,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'ลัลล์ลลิล',
                     'img' =>'11.jpg'
                 ]),
-                            new App\Title([
-                    'name' => "กลลวงจอมพยัคฆ์",
+                            new App\Book([
+                    'book_name' => "กลลวงจอมพยัคฆ์",
                     'status' => "available",
                     'price' => 249.00,
                     'author' =>"นรีรัตน์",
@@ -142,8 +142,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'-',
                     'img' =>'12.jpg'
                 ]),
-                            new App\Title([
-                    'name' => "เนเมียวสีหบดี",
+                            new App\Book([
+                    'book_name' => "เนเมียวสีหบดี",
                     'status' => "available",
                     'price' => 93.00,
                     'author' =>"กุดารัศมี",
@@ -155,14 +155,14 @@ class DatabaseSeeder extends Seeder
 
             ]);
 
-    	}
+        }
 
 
-        $category = App\Category::where('name', '=', 'นิตยสาร')->first();
+        $category = App\Category::where('category_name', '=', 'นิตยสาร')->first();
         if (!is_null($category)) {
             $category->books()->saveMany([
-                            new App\Title([
-                    'name' => "เคหการเกษตร ฉบับ พฤษภาคม 2560",
+                            new App\Book([
+                    'book_name' => "เคหการเกษตร ฉบับ พฤษภาคม 2560",
                     'status' => "available",
                     'price' => 70.00,
                     'author' =>"-",
@@ -172,8 +172,8 @@ class DatabaseSeeder extends Seeder
                     'img' =>'14.jpg'
                 ]),
 
-                            new App\Title([
-                    'name' => "นิตยสาร IMpossible no.2",
+                            new App\Book([
+                    'book_name' => "นิตยสาร IMpossible no.2",
                     'status' => "available",
                     'price' => 95.00,
                     'author' =>"-",
@@ -183,8 +183,8 @@ class DatabaseSeeder extends Seeder
                     'img' =>'15.jpg'
                 ]),
 
-                            new App\Title([
-                    'name' => "Mellow ISSUE 13",
+                            new App\Book([
+                    'book_name' => "Mellow ISSUE 13",
                     'status' => "available",
                     'price' => 50.00,
                     'author' =>"-",
@@ -193,8 +193,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'เมลโล่',
                     'img' =>'16.jpg'
                 ]),
-                            new App\Title([
-                    'name' => "หมอชาวบ้าน พฤษภาคม 2560 Vol.457",
+                            new App\Book([
+                    'book_name' => "หมอชาวบ้าน พฤษภาคม 2560 Vol.457",
                     'status' => "available",
                     'price' => 55.00,
                     'author' =>"-",
@@ -203,8 +203,8 @@ class DatabaseSeeder extends Seeder
                     'publishComp' =>'สำนักพิมพ์หมอชาวบ้าน',
                     'img' =>'17.jpg'
                 ]),
-                            new App\Title([
-                    'name' => "SciMag ฉบับสิงหาคม 2559",
+                            new App\Book([
+                    'book_name' => "SciMag ฉบับสิงหาคม 2559",
                     'status' => "available",
                     'price' => 80.00,
                     'author' =>"-",
@@ -217,5 +217,5 @@ class DatabaseSeeder extends Seeder
         ]);
 
         }
-	}
+    }
 }
