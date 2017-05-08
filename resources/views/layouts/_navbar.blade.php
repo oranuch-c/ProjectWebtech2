@@ -16,13 +16,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="{{ url('/singers') }}">Singers</a></li>
+        <li><a href="{{ url('/singers') }}">Promotion</a></li>
 
-        <li><a href="{{ url('/api/singers') }}">API</a></li>
+        <li><a href="{{ url('/api/singers') }}">All book</a></li>
 
         @if (Route::has('login'))
             @if (Auth::check())
-                <li><a href="{{ url('/singers/create') }}">Add Singer</a></li>
+                <li><a href="{{ url('/singers/create') }}">My Cart</a></li>
             @endif
         @endif
      </ul>
