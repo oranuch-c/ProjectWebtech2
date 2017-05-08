@@ -22,10 +22,11 @@
 
                       <div class="col-xs-6 col-md-8">
                         <h1 class="title">{{ Auth::user()->name }}</h1>
-                        <button type="button" class="btn btn-success"><h1>4,956 point</h1></button>
+                        <h3 class="title">Birth date : {{ Auth::user()->birthdate }}</h3>
+                        <a href="/vochers" type="button" class="btn btn-success"><h1>{{ Auth::user()->point }} point</h1></a>
                         <h3 class="title">Email : {{ Auth::user()->email }}</h3>
-                        <h3 class="title">Tel : {{ Auth::user()->name }}</h3>
-                        <h5 class="title">Address : {{ Auth::user()->name }}</h5>
+                        <h3 class="title">Tel : {{ Auth::user()->tel }}</h3>
+                        <h5 class="title">Address : {{ Auth::user()->address }}</h5>
 
                       </div>
                     </div>
