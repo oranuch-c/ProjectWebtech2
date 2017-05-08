@@ -55,6 +55,10 @@ Route::get('voucher', function () {
     return view('/voucher');
 });
 
+Route::get('addvoucher', function () {
+    return view('/addvoucher');
+});
+
 
 
 Route::get('master',function(){
