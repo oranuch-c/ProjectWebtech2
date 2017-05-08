@@ -56,8 +56,6 @@ class RegisterController extends Controller
             'address' => 'required|string',
             'type' => 'required',
 
-
-
         ]);
     }
 
@@ -77,7 +75,6 @@ class RegisterController extends Controller
             'birthdate' => $data['birthdate'],
             'address' => $data['address'],
             'type' => $data['type'],
-
 
         ]);
     }
