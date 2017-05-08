@@ -15,4 +15,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('book', 'BookController@index');
+Route::get('categories', 'BookController@index');
+Route::get('titles', 'TitleController@index');

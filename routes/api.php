@@ -18,4 +18,6 @@ use Illuminate\Http\Request;
 // });
 
 Route::get('book', 'Api\BookController@index');
+// Route::get('titles', 'Api\TitleController@index');
 Route::resource('book', 'Api\BookController');
+Route::resource('titles', 'Api\TitleController');

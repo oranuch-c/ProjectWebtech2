@@ -15,10 +15,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{{ url('/categories') }}">Categories</a></li>
-        <li><a href="{{ url('/categories/titles') }}">Titles</a></li>
+        <li><a href="{{ url('/titles') }}">Titles</a></li>
         <!-- <li><a href="{{ url('/categories/searchBook') }}">Search Book</a></li> -->
         <li><a href="{{ url('/categories/search') }}">Search Books</a></li>
-        <li><a href="{{ url('/api/categories') }}">API</a></li>
+        <li><a href="{{ url('/api/titles') }}">API</a></li>
      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
