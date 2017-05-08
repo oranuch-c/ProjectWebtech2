@@ -1,9 +1,0 @@
-diff a/app/User.php b/app/User.php	(rejected hunks)
-@@ -15,7 +15,6 @@
-      * @var array
-      */
-     protected $fillable = [
--        'name', 'email', 'password',
-         'name', 'email', 'password', 'tel', 'birthdate', 'address', 'type',
-     ];
- 

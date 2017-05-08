@@ -13,7 +13,6 @@ class CreatePromotionsTable extends Migration
      */
     public function up()
     {
-        //
         Schema::create('promotions',function(Blueprint $table){
           $table->increments('promotion_id');
           $table->string('title');
