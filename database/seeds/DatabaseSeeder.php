@@ -11,9 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        App\Category::create(['name' => 'การ์ตูน']);
     	App\Category::create(['name' => 'วรรณกรรม นวนิยาย']);
         App\Category::create(['name' => 'นิตยสาร']);
-        App\Category::create(['name' => 'การ์ตูน']);
+        App\Category::create(['name' => 'หนังสือต่างประเทศ']);
 
 
         $category = App\Category::where('name', '=', 'วรรณกรรม นวนิยาย')->first();
