@@ -14,10 +14,10 @@ class CreatePromotionsTable extends Migration
     public function up()
     {
         Schema::create('promotions',function(Blueprint $table){
-          $table->increments('promotion_id');
+          $table->increments('id');
           $table->string('title');
           $table->text('description');
-          $table->date('expired_date');
+          $table->text('expired_date');
           $table->timestamps();
         });
     }
