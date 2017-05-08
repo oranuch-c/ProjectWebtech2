@@ -23,7 +23,7 @@ class User extends Authenticatable
         'address',
         'point',
         'type',
-        'img',
+        'avatar',
     ];
 
     /**

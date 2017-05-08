@@ -78,7 +78,7 @@ class RegisterController extends Controller
             'address' => $data['add'],
             'point' => 0,
             'type' => '',
-            'img' => '',
+            'avatar' => '',
 
 
         ]);

@@ -54,10 +54,8 @@ Route::get('master',function(){
   return view('layouts.master');
 });
 
-Route::get('/profile', 'UserController@index');
-// Route::get('/home', 'HomeController@index');
-
 Auth::routes();
+
 Route::get('/info', 'InfoController@index');
 Route::get('/info', function () {
   						$books = ['book1', 'book2', 'book3', 'book4', 'book5'];
