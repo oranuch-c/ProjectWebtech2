@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 
+
 Route::get('all', function () {
     return view('book.show');
 });
@@ -23,3 +24,4 @@ Route::get('categories', 'BookController@index');
 Route::get('titles', 'TitleController@index');
 Route::get('search', 'TitleController@search');
 // Route::get('all', 'TitleController');
+
