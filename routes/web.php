@@ -51,6 +51,10 @@ Route::get('components', function () {
     return view('/components');
 });
 
+Route::get('voucher', function () {
+    return view('/voucher');
+});
+
 
 
 Route::get('master',function(){
