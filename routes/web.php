@@ -22,3 +22,6 @@ Route::get('/info', function () {
   						$books = ['book1', 'book2', 'book3', 'book4', 'book5'];
    						 return view('info',compact('books'));
 });
+
+Route::get('manage-vue', 'VuePromotionController@manageVue');
+Route::resource('vuepromotions','VuePromotionController');
