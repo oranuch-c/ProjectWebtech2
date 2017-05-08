@@ -11,17 +11,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        App\Category::create(['category_name' => 'การ์ตูน']);
-        App\Category::create(['category_name' => 'วรรณกรรม นวนิยาย']);
-        App\Category::create(['category_name' => 'นิตยสาร']);
-        App\Category::create(['category_name' => 'หนังสือต่างประเทศ']);
+        App\Category::create(['name' => 'การ์ตูน']);
+        App\Category::create(['name' => 'วรรณกรรม นวนิยาย']);
+        App\Category::create(['name' => 'นิตยสาร']);
+        App\Category::create(['name' => 'หนังสือต่างประเทศ']);
 
 
-        $category = App\Category::where('category_name', '=', 'วรรณกรรม นวนิยาย')->first();
+
+
+        $category = App\Category::where('name', '=', 'วรรณกรรม นวนิยาย')->first();
         if (!is_null($category)) {
             $category->books()->saveMany([
                             new App\Book([
-                    'book_name' => "รักเปื้อนร้าย",
+                    'name' => "รักเปื้อนร้าย",
                     'status' => "available",
                     'price' => 50.00,
                     'author' =>"-",
@@ -32,7 +34,7 @@ class DatabaseSeeder extends Seeder
                 ]),
 
                             new App\Book([
-                    'book_name' => "เจาะจิตฆาตกร เล่ม 1 ตอน ผ่าปมวิปริต",
+                    'name' => "เจาะจิตฆาตกร เล่ม 1 ตอน ผ่าปมวิปริต",
                     'status' => "available",
                     'price' => 295.00,
                     'author' =>"-",
@@ -43,7 +45,7 @@ class DatabaseSeeder extends Seeder
                 ]),
 
                             new App\Book([
-                    'book_name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย",
+                    'name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย",
                     'status' => "available",
                     'price' => 50.00,
                     'author' =>"ล. วิลิศมาหรา",
@@ -53,7 +55,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'3.png'
                 ]),
                             new App\Book([
-                    'book_name' => "แดนรักมาเฟียเถื่อน",
+                    'name' => "แดนรักมาเฟียเถื่อน",
                     'status' => "available",
                     'price' => 279.00,
                     'author' =>"-",
@@ -63,7 +65,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'4.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "พระพรหมแสนซน",
+                    'name' => "พระพรหมแสนซน",
                     'status' => "available",
                     'price' => 250.00,
                     'author' =>"-",
@@ -73,7 +75,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'5.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย2",
+                    'name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย2",
                     'status' => "available",
                     'price' => 50.00,
                     'author' =>"ล. วิลิศมาหรา",
@@ -83,7 +85,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'6.png'
                 ]),
                             new App\Book([
-                    'book_name' => "เรื่องของฟ้าวลี สาวน้อยบนตึก",
+                    'name' => "เรื่องของฟ้าวลี สาวน้อยบนตึก",
                     'status' => "available",
                     'price' => 50.00,
                     'author' =>"-",
@@ -93,7 +95,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'7.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "บัญชารักเทพบุตรเถื่อน",
+                    'name' => "บัญชารักเทพบุตรเถื่อน",
                     'status' => "available",
                     'price' => 289.00,
                     'author' =>"-",
@@ -103,7 +105,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'8.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "สงครามลิขิตรัก",
+                    'name' => "สงครามลิขิตรัก",
                     'status' => "available",
                     'price' => 350.00,
                     'author' =>"ธุวดารา",
@@ -113,7 +115,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'9.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "ซีรี่ย์รักชุด อสูรปองรัก",
+                    'name' => "ซีรี่ย์รักชุด อสูรปองรัก",
                     'status' => "available",
                     'price' => 99.00,
                     'author' =>"คีตะธารา",
@@ -123,7 +125,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'10.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "ภูผาไอยรา",
+                    'name' => "ภูผาไอยรา",
                     'status' => "available",
                     'price' => 150.00,
                     'author' =>"ธุวดารา",
@@ -133,7 +135,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'11.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "กลลวงจอมพยัคฆ์",
+                    'name' => "กลลวงจอมพยัคฆ์",
                     'status' => "available",
                     'price' => 249.00,
                     'author' =>"นรีรัตน์",
@@ -143,7 +145,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'12.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "เนเมียวสีหบดี",
+                    'name' => "เนเมียวสีหบดี",
                     'status' => "available",
                     'price' => 93.00,
                     'author' =>"กุดารัศมี",
@@ -158,11 +160,11 @@ class DatabaseSeeder extends Seeder
         }
 
 
-        $category = App\Category::where('category_name', '=', 'นิตยสาร')->first();
+        $category = App\Category::where('name', '=', 'นิตยสาร')->first();
         if (!is_null($category)) {
             $category->books()->saveMany([
                             new App\Book([
-                    'book_name' => "เคหการเกษตร ฉบับ พฤษภาคม 2560",
+                    'name' => "เคหการเกษตร ฉบับ พฤษภาคม 2560",
                     'status' => "available",
                     'price' => 70.00,
                     'author' =>"-",
@@ -173,7 +175,7 @@ class DatabaseSeeder extends Seeder
                 ]),
 
                             new App\Book([
-                    'book_name' => "นิตยสาร IMpossible no.2",
+                    'name' => "นิตยสาร IMpossible no.2",
                     'status' => "available",
                     'price' => 95.00,
                     'author' =>"-",
@@ -184,7 +186,7 @@ class DatabaseSeeder extends Seeder
                 ]),
 
                             new App\Book([
-                    'book_name' => "Mellow ISSUE 13",
+                    'name' => "Mellow ISSUE 13",
                     'status' => "available",
                     'price' => 50.00,
                     'author' =>"-",
@@ -194,7 +196,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'16.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "หมอชาวบ้าน พฤษภาคม 2560 Vol.457",
+                    'name' => "หมอชาวบ้าน พฤษภาคม 2560 Vol.457",
                     'status' => "available",
                     'price' => 55.00,
                     'author' =>"-",
@@ -204,7 +206,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'17.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "SciMag ฉบับสิงหาคม 2559",
+                    'name' => "SciMag ฉบับสิงหาคม 2559",
                     'status' => "available",
                     'price' => 80.00,
                     'author' =>"-",
@@ -217,5 +219,149 @@ class DatabaseSeeder extends Seeder
         ]);
 
         }
+
+        $category = App\Category::where('name', '=', 'การ์ตูน')->first();
+        if (!is_null($category)) {
+            $category->books()->saveMany([
+                            new App\Book([
+                    'name' => "ก้าวแรกสู่สังเวียน เล่ม 74",
+                    'status' => "available",
+                    'price' => 59.00,
+                    'author' =>" โจจิ โมริคาว่า",
+                    'year' =>'25 เม.ย. 2560',
+                    'pageSize' =>"90 หน้า",
+                    'publishComp' =>'Kodansha Ltd.',
+                    'img' =>'19.jpg'
+                ]),
+
+                            new App\Book([
+                    'name' => "มังกรอหังการ ภาค สงครามจงหยวน เล่ม 15",
+                    'status' => "available",
+                    'price' => 59.00,
+                    'author' =>" YOSHITO YAMAHARA",
+                    'year' =>'12 ส.ค. 2560',
+                    'pageSize' =>"-",
+                    'publishComp' =>'Kodansha Ltd.',
+                    'img' =>'20.jpg'
+                ]),
+
+                            new App\Book([
+                    'name' => "ยอดยุทธ์บุรุษเหล็ก เล่ม 54",
+                    'status' => "available",
+                    'price' => 50.00,
+                    'author' =>"ซิวฝูหลง",
+                    'year' =>'5 ก.ค. 2558',
+                    'pageSize' =>"-",
+                    'publishComp' =>' Dark Comic & Toys Limited',
+                    'img' =>'21.jpg'
+                ]),
+                            new App\Book([
+                    'name' => "
+ไฮคิว! Haikyu คู่ตบฟ้าประทาน ฮินาตะกับคาเงยามะ หนังสือ การ์ตูน ญี่ปุ่น Haikyu smm sic สยามอินเตอร์",
+                    'status' => "available",
+                    'price' => 713.00,
+                    'author' =>"ทีมงานอี.คิว.พลัส จีเนียส",
+                    'year' =>'24 พ.ค. 2560',
+                    'pageSize' =>"181 หน้า",
+                    'publishComp' =>' E.Q.Plus Genius',
+                    'img' =>'22.jpg'
+                ]),
+                            new App\Book([
+                    'name' => "SMM หนังสือการ์ตูน เซียวซิวจุ้ย ยอดยุทธ์ผู้พิชิต เล่ม 1 - 10(จบ)",
+                    'status' => "available",
+                    'price' => 902.00,
+                    'author' =>"-",
+                    'year' =>'24 ม.ค. 2560',
+                    'pageSize' =>"603 หน้า",
+                    'publishComp' =>'Siam inter multimedia co.,ltd.-C200042',
+                    'img' =>'23.png'
+                ]),
+                            new App\Book([
+                    'name' => " หนังสือการ์ตูน My Hero Academia เล่ม 1 - 7",
+                    'status' => "available",
+                    'price' => 333.00,
+                    'author' =>"-",
+                    'year' =>'6 ก.ค. 2558',
+                    'pageSize' =>"50 หน้า",
+                    'publishComp' =>'สยามอินเตอร์มัลติมีเดีย จำกัด (มหาชน)',
+                    'img' =>'24.png'
+                ]),
+                            new App\Book([
+                    'name' => "KOBATO. โคบาโตะ 6 (เล่มจบ)",
+                    'status' => "available",
+                    'price' => 55.00,
+                    'author' =>"CLAMP",
+                    'year' =>'1 เม.ย. 2559',
+                    'pageSize' =>"181 หน้า",
+                    'publishComp' =>'บงกช คอมมิคส์',
+                    'img' =>'25.jpg'
+                ]),
+ 
+
+            ]);
+
+        }
+
+        $category = App\Category::where('name', '=', 'หนังสือต่างประเทศ')->first();
+        if (!is_null($category)) {
+            $category->books()->saveMany([
+                            new App\Book([
+                    'name' => "culture and etiquette book",
+                    'status' => "available",
+                    'price' => 450.00,
+                    'author' =>"-",
+                    'year' =>'20 ก.ค. 2559',
+                    'pageSize' =>"540 หน้า",
+                    'publishComp' =>'-',
+                    'img' =>'26.jpg'
+                ]),
+
+                            new App\Book([
+                    'name' => "outsider art",
+                    'status' => "available",
+                    'price' => 200.00,
+                    'author' =>"-",
+                    'year' =>'14 ธ.ค. 2554',
+                    'pageSize' =>"46 หน้า",
+                    'publishComp' =>'ภาพวาดกีฬาปีนผา',
+                    'img' =>'27.jpg'
+                ]),
+
+                            new App\Book([
+                    'name' => "GREAT LEADERS, GREAT SPEECHES",
+                    'status' => "available",
+                    'price' => 300.00,
+                    'author' =>"ดร.ธีรวิทย์ ภิญโญณัฐกานต์",
+                    'year' =>'17 เม.ย. 2555',
+                    'pageSize' =>"184 หน้า",
+                    'publishComp' =>' Dark Comic & Toys Limited',
+                    'img' =>'28.jpg'
+                ]),
+                            new App\Book([
+                    'name' => "A History of Freedom of Thought",
+                    'status' => "available",
+                    'price' => 600.00,
+                    'author' =>"J. B. BURY",
+                    'year' =>'17 ม.ค. 2555',
+                    'pageSize' =>"181 หน้า",
+                    'publishComp' =>'kanomdesign Studio',
+                    'img' =>'29.png'
+                ]),
+                            new App\Book([
+                    'name' => "5 Simple Tips to Boost Your Sales in the Jewelry Business",
+                    'status' => "available",
+                    'price' => 119.00,
+                    'author' =>"-",
+                    'year' =>'16 ต.ค. 2555',
+                    'pageSize' =>"64 หน้า",
+                    'publishComp' =>'อินฟินิตี้แอนด์บียอนด์',
+                    'img' =>'30.jpg'
+                ]),
+ 
+
+            ]);
+
+        }
+
     }
 }

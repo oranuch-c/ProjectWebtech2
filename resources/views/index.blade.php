@@ -79,7 +79,7 @@
 			<div class="well well-small">
 			<h4>Featured Products <small class="pull-right">200+ featured products</small></h4>
 			<div class="row-fluid">
-			<div id="featured" class="carousel slide">
+			<!-- <div id="featured" class="carousel slide"> -->
 			<div class="carousel-inner">
 			  <div class="item active">
 			  <ul class="thumbnails">
@@ -252,7 +252,7 @@
 			  <a class="right carousel-control" href="#featured" data-slide="next">›</a>
 			  </div>
 			  </div>
-		</div>
+		<!-- </div> -->
 		<h4>Latest Products </h4>
 			  <ul class="thumbnails">
 				<li class="span3">

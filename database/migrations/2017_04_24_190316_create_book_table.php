@@ -14,8 +14,8 @@ class CreateBookTable extends Migration
     public function up()
     {
         Schema::create('books', function (Blueprint $table) {
-            $table->increments('book_id');
-            $table->string('book_name');
+            $table->increments('id');
+            $table->string('name');
             $table->string('status');
             $table->double('price', 7, 2);
             $table->string('author');
@@ -28,7 +28,7 @@ class CreateBookTable extends Migration
             $table->softDeletes();
 
             $table->foreign('category_id')
-                  ->references('category_id')
+                  ->references('id')
                   ->on('categories');
         });
     }
