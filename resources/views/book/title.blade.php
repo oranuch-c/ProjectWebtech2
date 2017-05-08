@@ -31,9 +31,9 @@
                 <tbody>
                     @foreach ($data as $d)
                     <tr>
-                        <td>{{ $d->book_id }}</td>
+                        <td>{{ $d->id }}</td>
                         <td>
-                            {{ $d->book_name }}
+                            {{ $d->name }}
                         </td>
                         <td>{{ $d->status }}</td>
                         <td>{{ $d->price }}</td>
@@ -87,8 +87,8 @@
                 </thead>
                 <tbody>
                     <tr v-for="d in data">
-                        <td>@{{ d.book_id }}</td>
-                        <td>@{{ d.book_name }}</td>
+                        <td>@{{ d.id }}</td>
+                        <td>@{{ d.name }}</td>
                         <td>@{{ d.status }}</td>
                         <td>@{{ d.price }}</td>
                         <td>@{{ d.author }}</td>
@@ -109,6 +109,7 @@
 
 @section('script')
 <script>
+
     var data = <?php echo $resBody; ?>;
     var vjson = new Vue({
         el: '#json-beautifier',
