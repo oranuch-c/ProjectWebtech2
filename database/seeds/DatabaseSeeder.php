@@ -16,6 +16,25 @@ class DatabaseSeeder extends Seeder
         App\Category::create(['category_name' => 'นิตยสาร']);
         App\Category::create(['category_name' => 'หนังสือต่างประเทศ']);
 
+        App\Promotion::create([
+          'id' => '1421',
+          'title' => 'เช่า5เล่มลด10%',
+          'description' => 'เช่าหนังสือของร้านทุกประเภทตั้งแต่5เล่มขึ้นไปได้รับส่วนลดทันที15%',
+          'expired_date' => '20 พ.ค. 2560'
+        ]);
+        App\Promotion::create([
+          'id' => '1422',
+          'title' => 'เช่านวนิยาย ลดราคา 15%',
+          'description' => 'เช่าหนังสือประเภทนวนิยายได้รับส่วนลดทันที5%',
+          'expired_date' => '25 มิ.ย. 2560'
+        ]);
+        App\Promotion::create([
+          'id' => '1423',
+          'title' => 'เช่าหนังสือ10เล่มขึ้นไปได้สิทธิ์เช่าฟรีอีก1เล่ม',
+          'description' => 'เช่าหนังสือของทางร้านทุกประเภทตั้งแต่10เล่มขึ้นไปในการเช่า1ครั้งได้สิทธิ์เช่าฟรีทันทีอีก1เล่ม',
+          'expired_date' => '17 พ.ย. 2560'
+        ]);
+
 
         $category = App\Category::where('category_name', '=', 'วรรณกรรม นวนิยาย')->first();
         if (!is_null($category)) {
@@ -217,5 +236,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         }
+
+
     }
 }
