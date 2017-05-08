@@ -18,7 +18,12 @@
       <ul class="nav navbar-nav">
         <li><a href="{{ url('/singers') }}">Promotion</a></li>
 
-        <li><a href="{{ url('/api/singers') }}">All book</a></li>
+        <li><a href="{{ url('/api/singers') }}">API</a></li>
+        <li><a href="{{ url('/all') }}">Book Rental Shop</a></li>
+        <li><a href="{{ url('/categories') }}">Categories</a></li>
+        <li><a href="{{ url('/titles') }}">Titles</a></li>
+        <li><a href="{{ url('/search') }}">Search Books</a></li>
+        <li><a href="{{ url('/api/titles') }}">API</a></li>
 
         @if (Route::has('login'))
             @if (Auth::check())
@@ -58,4 +63,5 @@
      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+</nav>
 </nav>
