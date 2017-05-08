@@ -64,7 +64,7 @@ Route::get('/info', function () {
 
 Route::get('manage-vue', 'VuePromotionController@manageVue');
 Route::resource('vuepromotions','VuePromotionController');
-=======
+
 
 Route::get('all', function () {
     return view('book.show');
