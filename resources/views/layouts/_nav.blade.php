@@ -25,11 +25,6 @@
 			<option>วรรณกรรม นวนิยาย</option>
 			<option>นิตยสาร</option>
 			<option>หนังสือต่างประเทศ </option>
-				<option>CLOTHES </option>
-				<option>FOOD AND BEVERAGES </option>
-				<option>HEALTH & BEAUTY </option>
-				<option>SPORTS & LEISURE </option>
-				<option>BOOKS & ENTERTAINMENTS </option>
 
 		</select>
 		  <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
@@ -38,7 +33,7 @@
 	 <li class=""><a href="/special_offer">Specials Offer</a></li>
 	 <li class=""><a href="/contact">Contact</a></li>
 	 <li class=""><a href="/register">Register</a></li>
-	 <li class=""><a href="/register">Borrow</a></li>
+	 <li class=""><a href="/borrow">Borrow</a></li>
 	 <li class="">
 	 <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>
 	<div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false" >
