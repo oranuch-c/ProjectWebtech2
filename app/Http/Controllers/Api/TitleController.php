@@ -16,7 +16,7 @@ class TitleController extends Controller
     {
 
         
-        $title = \App\Title::all();
+        $title = \App\Book::all();
         return [
             'success' => true,
             'data' => $title
@@ -54,7 +54,7 @@ class TitleController extends Controller
     {
         // return $name;
         //
-        $title = \App\Title::where('name','=',$name);
+        $title = \App\Book::where('book_name','=',$name);
         if (!is_null($title))
             return [
                 'success' => true,

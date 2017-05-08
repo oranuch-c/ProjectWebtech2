@@ -1,4 +1,4 @@
-@include('layouts.master')
+
 <!DOCTYPE html>
 <html>
 <head>
