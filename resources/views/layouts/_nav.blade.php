@@ -25,6 +25,12 @@
 			<option>วรรณกรรม นวนิยาย</option>
 			<option>นิตยสาร</option>
 			<option>หนังสือต่างประเทศ </option>
+				<option>CLOTHES </option>
+				<option>FOOD AND BEVERAGES </option>
+				<option>HEALTH & BEAUTY </option>
+				<option>SPORTS & LEISURE </option>
+				<option>BOOKS & ENTERTAINMENTS </option>
+
 		</select>
 		  <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
     </form>
