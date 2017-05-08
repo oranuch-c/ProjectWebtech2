@@ -8,6 +8,7 @@
 		<div class="carousel-inner">
 		  <div class="item active">
 		  <div class="container">
+			<a href="register.html"><img style="width:100%" src="themes/images/carousel/1.png" alt="special offers"/></a>
 			<a href="/product_details"><img style="width:100%" src="themes/images/carousel/1.png" alt="special offers"/></a>
 			<div class="carousel-caption">
 				  <h4>Second Thumbnail label</h4>
@@ -17,6 +18,7 @@
 		  </div>
 		  <div class="item">
 		  <div class="container">
+			<a href="register.html"><img style="width:100%" src="themes/images/carousel/2.png" alt=""/></a>
 			<a href="/product_details"><img style="width:100%" src="themes/images/carousel/2.png" alt=""/></a>
 				<div class="carousel-caption">
 				  <h4>Second Thumbnail label</h4>
