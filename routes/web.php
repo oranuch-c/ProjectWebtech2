@@ -64,3 +64,13 @@ Route::get('/info', function () {
 
 Route::get('manage-vue', 'VuePromotionController@manageVue');
 Route::resource('vuepromotions','VuePromotionController');
+=======
+
+Route::get('all', function () {
+    return view('book.show');
+});
+
+Route::get('categories', 'BookController@index');
+Route::get('titles', 'TitleController@index');
+Route::get('search', 'TitleController@search');
+// Route::get('all', 'TitleController');
