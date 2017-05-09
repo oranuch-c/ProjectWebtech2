@@ -18,12 +18,12 @@ class CreateBookTable extends Migration
             $table->string('name');
             $table->string('status');
             $table->double('price', 7, 2);
-            $table->string('author');
-            $table->string('year');
-            $table->string('pageSize');
-            $table->string('publishComp');
-            $table->text('description');
-            $table->string('img');
+            $table->string('author')->nullable();
+            $table->string('year')->nullable();
+            $table->string('pageSize')->nullable();
+            $table->string('publishComp')->nullable();
+            $table->text('description')->nullable();
+            $table->string('img')->nullable();
             $table->integer('category_id')->unsigned();
             $table->timestamps();
             $table->softDeletes();
