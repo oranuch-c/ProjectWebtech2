@@ -54,7 +54,7 @@ class TitleController extends Controller
     {
         // return $name;
         //
-        $title = \App\Book::where('book_name','=',$name);
+        $title = \App\Book::where('name', 'like', '%'.$name.'%');
         if (!is_null($title))
             return [
                 'success' => true,

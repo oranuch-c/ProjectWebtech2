@@ -16,7 +16,11 @@ class TitleController extends Controller
     public function index()
     {
         $client = new \GuzzleHttp\Client();
-        $call = "titles";
+        if(isset($_GET['srchFld'])){ 
+            $call = "titles/".$_GET['srchFld'];
+        } else{
+            $call = "titles";
+        }
         $response = $client->request('GET', "{$this->api}{$call}", [
             'form_params' => []
         ]);
@@ -55,7 +59,7 @@ class TitleController extends Controller
      public function search() {
         $client = new \GuzzleHttp\Client();
         $call = "titles";
-        $response = $client->request('GET', "{$this->api}{$call}", [
+        $response = $client->request('POST', "{$this->api}{$call}", [
             'form_params' => []
         ]);
         $resBody = $response->getBody();
