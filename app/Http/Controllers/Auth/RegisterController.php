@@ -55,9 +55,6 @@ class RegisterController extends Controller
             'date' => 'required',
             'add' => 'required',
 
-
-
-
         ]);
     }
 
@@ -77,7 +74,6 @@ class RegisterController extends Controller
             'birthdate' => $data['date'],
             'address' => $data['add'],
             'point' => 0,
-            'type' => '',
             'img' => '',
 
 
