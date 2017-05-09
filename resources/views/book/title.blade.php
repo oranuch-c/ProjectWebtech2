@@ -84,7 +84,7 @@
                     <tr>
                         <th >ID</th>
                         <th >Name</th>
-                        
+
                         <th >Status</th>
                         <th >Price</th>
                         <th >Author</th>

@@ -18,9 +18,9 @@ class ProductController extends Controller
         $news = DB::table('books')
             ->join('new_books', 'books.id', '=', 'new_books.book_id')
             ->select('books.*')
+            ->limit(4)
             ->get();
 
-        echo $news;
         return view('index', ['books' => $books, 'new'=>$news]);
     }
     public function show($id)
