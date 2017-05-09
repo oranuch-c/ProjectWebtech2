@@ -11,8 +11,8 @@
 <!-- Sidebar end=============================================== -->
 	<div class="span9">
     <ul class="breadcrumb">
-    <li><a href="index.html">Home</a> <span class="divider">/</span></li>
-    <li><a href="products.html">Products</a> <span class="divider">/</span></li>
+    <li><a href="/index">Home</a> <span class="divider">/</span></li>
+    <li><a href="/products/">Products</a> <span class="divider">/</span></li>
     <li class="active">product Details</li>
     </ul>
 	<div class="row">

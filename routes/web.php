@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('/index');
 });
 
 Route::get('register', function () {
@@ -57,6 +57,7 @@ Route::get('master',function(){
   return view('layouts.master');
 });
 
+Route::get('/profile', 'UserController@index');
 // Route::get('/home', 'HomeController@index');
 
 Auth::routes();
@@ -77,4 +78,6 @@ Route::get('all', function () {
 Route::get('categories', 'BookController@index');
 Route::get('titles', 'TitleController@index');
 Route::get('search', 'TitleController@search');
+Route::get('index', 'ProductController@index');
+Route::get('/product_details/{id}','ProductController@show');
 // Route::get('all', 'TitleController');
