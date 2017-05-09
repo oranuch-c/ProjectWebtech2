@@ -1,18 +1,21 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+@include('layouts._head')
+
+
 <head>
-	<title>Laravel Vue JS Promotion CRUD</title>
+
+	<title>Promotion For Admin</title>
 	<meta id="token" name="token" value="{{ csrf_token() }}">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
 </head>
 <body>
-
+@include('layouts._nav')
 	<div class="container" id="manage-vue">
 
 		<div class="row">
 		    <div class="col-lg-12 margin-tb">
-		        <div class="pull-left">
+		        <div class="span12 pagination-centered">
 		            <h2>Promotion</h2>
 		        </div>
 		        <div class="pull-right">
@@ -155,7 +158,6 @@
 
 
 
-
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
 
@@ -168,4 +170,7 @@
 	<script type="text/javascript" src="/js/Promotion.js"></script>
 
 </body>
+@include('layouts._footer')
+<!-- Placed at the end of the document so the pages load faster ============================================= -->
+@include('layouts._script')
 </html>
