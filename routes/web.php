@@ -78,4 +78,5 @@ Route::get('categories', 'BookController@index');
 Route::get('titles', 'TitleController@index');
 Route::get('search', 'TitleController@search');
 Route::get('index', 'ProductController@index');
+Route::get('/product_details/{id}','ProductController@show');
 // Route::get('all', 'TitleController');

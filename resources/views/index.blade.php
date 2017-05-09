@@ -72,7 +72,7 @@
           <ul class="thumbnails">
 				  <div class="thumbnail">
 				  <i class="tag"></i>
-					<a href="product_details.html"><img src="img/{{$book->img}}" alt=""></a>
+					<a href="/product_details/{{$book->id}}"><img src="img/{{$book->img}}" alt=""></a>
 					<div class="caption">
 					  <h5>{{$book->name}}</h5>
 					  <h4><a class="btn" href="/product_details">VIEW</a> <span class="pull-right">{{$book->price}}</span></h4>
@@ -114,4 +114,12 @@
 <!-- Placed at the end of the document so the pages load faster ============================================= -->
 	 @include('layouts._script')
 </body>
+
+<script type="text/javascript">
+function onclick(name){
+
+}
+
+</script>
+
 </html>

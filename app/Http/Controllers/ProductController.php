@@ -18,4 +18,10 @@ class ProductController extends Controller
 
         return view('index', ['books' => $books]);
     }
+    public function show($id)
+    {
+        echo $id;
+
+        return view('product_details', compact('id'));
+    }
 }
