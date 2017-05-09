@@ -23,6 +23,7 @@
                     <tr>
                         <th >ID</th>
                         <th >Name</th>
+                        
                         <th >Status</th>
                         <th >Price</th>
                         <th >Author</th>
@@ -36,7 +37,8 @@
                     @foreach ($data as $d)
                     <tr>
                         <td>{{ $d->id }}</td>
-                        <td>{{ $d->name }}</td>
+                        <td style="width: 15%"">{{ $d->name }}</td>
+
                         <td>{{ $d->status }}</td>
                         <td>{{ $d->price }}</td>
                         <td>{{ $d->author }}</td>

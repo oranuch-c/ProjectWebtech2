@@ -144,6 +144,7 @@
 
 
 			<a href="#" name="detail"></a>
+      <h5><?php echo $books->description; ?> </h5>
 			<hr class="soft"/>
 			</div>
 

@@ -22,6 +22,7 @@ class CreateBookTable extends Migration
             $table->string('year');
             $table->string('pageSize');
             $table->string('publishComp');
+            $table->text('description');
             $table->string('img');
             $table->integer('category_id')->unsigned();
             $table->timestamps();
