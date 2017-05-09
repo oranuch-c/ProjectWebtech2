@@ -42,7 +42,6 @@ class DatabaseSeeder extends Seeder
 
         $category = App\Category::where('category_name', '=', 'วรรณกรรม นวนิยาย')->first();
 
-
         $category = App\Category::where('name', '=', 'วรรณกรรม นวนิยาย')->first();
         if (!is_null($category)) {
             $category->books()->saveMany([
@@ -259,8 +258,6 @@ class DatabaseSeeder extends Seeder
 
         }
 
-<<<<<<< HEAD
-=======
         $category = App\Category::where('name', '=', 'การ์ตูน')->first();
         if (!is_null($category)) {
             $category->books()->saveMany([
@@ -403,7 +400,6 @@ class DatabaseSeeder extends Seeder
             ]);
 
         }
->>>>>>> origin/showBook
 
     }
 }
