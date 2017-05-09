@@ -26,7 +26,7 @@ class CreateUserBooksTables extends Migration
                   ->on('users');
 
             $table->foreign('book_id')
-                  ->references('book_id')
+                  ->references('id')
                   ->on('books');
 
             $table->foreign('cart_id')

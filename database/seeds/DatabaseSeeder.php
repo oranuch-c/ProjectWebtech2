@@ -11,10 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        App\Category::create(['category_name' => 'การ์ตูน']);
-        App\Category::create(['category_name' => 'วรรณกรรม นวนิยาย']);
-        App\Category::create(['category_name' => 'นิตยสาร']);
-        App\Category::create(['category_name' => 'หนังสือต่างประเทศ']);
+
         App\Category::create(['name' => 'การ์ตูน']);
         App\Category::create(['name' => 'วรรณกรรม นวนิยาย']);
         App\Category::create(['name' => 'นิตยสาร']);
@@ -40,13 +37,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        $category = App\Category::where('category_name', '=', 'วรรณกรรม นวนิยาย')->first();
+
 
         $category = App\Category::where('name', '=', 'วรรณกรรม นวนิยาย')->first();
         if (!is_null($category)) {
             $category->books()->saveMany([
                             new App\Book([
-                    'book_name' => "รักเปื้อนร้าย",
                     'name' => "รักเปื้อนร้าย",
                     'status' => "available",
                     'price' => 50.00,
@@ -58,7 +54,6 @@ class DatabaseSeeder extends Seeder
                 ]),
 
                             new App\Book([
-                    'book_name' => "เจาะจิตฆาตกร เล่ม 1 ตอน ผ่าปมวิปริต",
                     'name' => "เจาะจิตฆาตกร เล่ม 1 ตอน ผ่าปมวิปริต",
                     'status' => "available",
                     'price' => 295.00,
@@ -70,7 +65,6 @@ class DatabaseSeeder extends Seeder
                 ]),
 
                             new App\Book([
-                    'book_name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย",
                     'name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย",
                     'status' => "available",
                     'price' => 50.00,
@@ -81,7 +75,6 @@ class DatabaseSeeder extends Seeder
                     'img' =>'3.png'
                 ]),
                             new App\Book([
-                    'book_name' => "แดนรักมาเฟียเถื่อน",
                     'name' => "แดนรักมาเฟียเถื่อน",
                     'status' => "available",
                     'price' => 279.00,
@@ -92,7 +85,6 @@ class DatabaseSeeder extends Seeder
                     'img' =>'4.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "พระพรหมแสนซน",
                     'name' => "พระพรหมแสนซน",
                     'status' => "available",
                     'price' => 250.00,
@@ -103,7 +95,6 @@ class DatabaseSeeder extends Seeder
                     'img' =>'5.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย2",
                     'name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย2",
                     'status' => "available",
                     'price' => 50.00,
@@ -114,7 +105,6 @@ class DatabaseSeeder extends Seeder
                     'img' =>'6.png'
                 ]),
                             new App\Book([
-                    'book_name' => "เรื่องของฟ้าวลี สาวน้อยบนตึก",
                     'name' => "เรื่องของฟ้าวลี สาวน้อยบนตึก",
                     'status' => "available",
                     'price' => 50.00,
@@ -125,7 +115,6 @@ class DatabaseSeeder extends Seeder
                     'img' =>'7.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "บัญชารักเทพบุตรเถื่อน",
                     'name' => "บัญชารักเทพบุตรเถื่อน",
                     'status' => "available",
                     'price' => 289.00,
@@ -136,7 +125,6 @@ class DatabaseSeeder extends Seeder
                     'img' =>'8.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "สงครามลิขิตรัก",
                     'name' => "สงครามลิขิตรัก",
                     'status' => "available",
                     'price' => 350.00,
@@ -147,7 +135,6 @@ class DatabaseSeeder extends Seeder
                     'img' =>'9.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "ซีรี่ย์รักชุด อสูรปองรัก",
                     'name' => "ซีรี่ย์รักชุด อสูรปองรัก",
                     'status' => "available",
                     'price' => 99.00,
@@ -158,7 +145,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'10.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "ภูผาไอยรา",
+                    'name' => "ภูผาไอยรา",
                     'status' => "available",
                     'price' => 150.00,
                     'author' =>"ธุวดารา",
@@ -168,7 +155,6 @@ class DatabaseSeeder extends Seeder
                     'img' =>'11.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "กลลวงจอมพยัคฆ์",
                     'name' => "กลลวงจอมพยัคฆ์",
                     'status' => "available",
                     'price' => 249.00,
@@ -179,7 +165,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'12.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "เนเมียวสีหบดี",
+                    'name' => "เนเมียวสีหบดี",
                     'status' => "available",
                     'price' => 93.00,
                     'author' =>"กุดารัศมี",
@@ -194,12 +180,11 @@ class DatabaseSeeder extends Seeder
         }
 
 
-        $category = App\Category::where('category_name', '=', 'นิตยสาร')->first();
+ 
         $category = App\Category::where('name', '=', 'นิตยสาร')->first();
         if (!is_null($category)) {
             $category->books()->saveMany([
                             new App\Book([
-                    'book_name' => "เคหการเกษตร ฉบับ พฤษภาคม 2560",
                     'name' => "เคหการเกษตร ฉบับ พฤษภาคม 2560",
                     'status' => "available",
                     'price' => 70.00,
@@ -211,7 +196,7 @@ class DatabaseSeeder extends Seeder
                 ]),
 
                             new App\Book([
-                    'book_name' => "นิตยสาร IMpossible no.2",
+                    'name' => "นิตยสาร IMpossible no.2",
                     'status' => "available",
                     'price' => 95.00,
                     'author' =>"-",
@@ -222,7 +207,6 @@ class DatabaseSeeder extends Seeder
                 ]),
 
                             new App\Book([
-                    'book_name' => "Mellow ISSUE 13",
                     'name' => "Mellow ISSUE 13",
                     'status' => "available",
                     'price' => 50.00,
@@ -233,7 +217,7 @@ class DatabaseSeeder extends Seeder
                     'img' =>'16.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "หมอชาวบ้าน พฤษภาคม 2560 Vol.457",
+                    'name' => "หมอชาวบ้าน พฤษภาคม 2560 Vol.457",
                     'status' => "available",
                     'price' => 55.00,
                     'author' =>"-",
@@ -243,7 +227,6 @@ class DatabaseSeeder extends Seeder
                     'img' =>'17.jpg'
                 ]),
                             new App\Book([
-                    'book_name' => "SciMag ฉบับสิงหาคม 2559",
                     'name' => "SciMag ฉบับสิงหาคม 2559",
                     'status' => "available",
                     'price' => 80.00,
