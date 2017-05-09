@@ -31,7 +31,7 @@ class CreateUserBooksTables extends Migration
 
             $table->foreign('cart_id')
                   ->references('cart_id')
-                  ->on('cart');
+                  ->on('carts');
         });
     }
 

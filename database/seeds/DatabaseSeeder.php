@@ -12,10 +12,25 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
+        App\User::create([
+        'name' => 'thanatchaporn',
+        'email' => 'thanatchaporn.S@ku.th',
+        'password'=>'123456',
+        'tel'=>'0859940372',
+        'birthdate'=>'1995-02-18',
+        'address'=>'Bangkok',
+        'point'=>20,
+        'img'=>'-'
+        ]);
+
         App\Category::create(['name' => 'การ์ตูน']);
         App\Category::create(['name' => 'วรรณกรรม นวนิยาย']);
         App\Category::create(['name' => 'นิตยสาร']);
         App\Category::create(['name' => 'หนังสือต่างประเทศ']);
+
+
+
+
 
         App\Promotion::create([
           'id' => '1421',
@@ -445,5 +460,34 @@ class DatabaseSeeder extends Seeder
 
         }
 
+        App\NewBooks::create([
+            'id' =>1,
+            'book_id' =>29
+            ]);
+
+                App\NewBooks::create([
+            'id' =>2,
+            'book_id' =>23
+            ]);
+
+                App\NewBooks::create([
+            'id' =>3,
+            'book_id' =>24
+            ]);
+
+
+
+            App\Cart::create([
+            'loan_date' =>'2017-05-17',
+            'returned_date' =>'2017-06-20',
+            'total' =>30
+            ]);
+
+            App\UserBook::create([
+                'user_id' => 1,
+                'book_id' => 25,
+                'cart_id' => 1,
+                ]);
     }
+
 }

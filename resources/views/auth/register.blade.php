@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row">
@@ -60,10 +59,37 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('tel') ? ' has-error' : '' }}">
+                            <label for="tel" class="col-md-4 control-label">Telephone</label>
+                            <div class="col-md-6">
+                                <input id="tel" type="tel" class="form-control" placeholder="+668xxxxxxx" name="tel" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('date') ? ' has-error' : '' }}">
+                            <label for="date" class="col-md-4 control-label">Date of Birth</label>
+                            <div class="col-md-6">
+                                <input id="date" type="date" class="form-control" name="date" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('add') ? ' has-error' : '' }}">
+                            <label for="add" class="col-md-4 control-label">Address</label>
+                            <div class="col-md-6">
+                                <input id="add" type="text" class="form-control" name="add" required>
+                            </div>
+                        </div>
+
+
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register
+                                </button>
+
+                                <button type="button" class="btn" onclick="clear()">
+                                    Clear
                                 </button>
                             </div>
                         </div>

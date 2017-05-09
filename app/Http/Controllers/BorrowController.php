@@ -48,8 +48,8 @@ class BorrowController extends Controller
     public function show()
     {
       $loan = DB::table('user_books')
-      ->join('cart','user_books.cart_id', '=','cart.cart_id')
-      ->select('user_books.user_id','user_books.book_id', 'cart.loan_date', 'cart.returned_date','cart.total')
+      ->join('carts','user_books.cart_id', '=','carts.cart_id')
+      ->select('user_books.user_id','user_books.book_id', 'carts.loan_date', 'carts.returned_date','carts.total')
       ->get();
       return view('borrow',[
         'loan' => $loan
