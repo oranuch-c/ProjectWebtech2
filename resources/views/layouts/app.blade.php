@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Login</title>
+    <title>Book Rental Shop</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -61,7 +61,6 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
                                       <a href="{{ url('/info') }}">Info</a>
-                                      <a href="{{ url('/changepass') }}">Reset Password</a>
                                       <a href="{{ route('logout') }}"
                                          onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">

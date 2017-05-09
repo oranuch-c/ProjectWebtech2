@@ -70,14 +70,14 @@
                         <div class="form-group{{ $errors->has('date') ? ' has-error' : '' }}">
                             <label for="date" class="col-md-4 control-label">Date of Birth</label>
                             <div class="col-md-6">
-                                <input id="tel" type="date" class="form-control" name="date" required>
+                                <input id="date" type="date" class="form-control" name="date" required>
                             </div>
                         </div>
 
                         <div class="form-group{{ $errors->has('add') ? ' has-error' : '' }}">
                             <label for="add" class="col-md-4 control-label">Address</label>
                             <div class="col-md-6">
-                                <input id="add" type="add" class="form-control" name="add" required>
+                                <input id="add" type="text" class="form-control" name="add" required>
                             </div>
                         </div>
 
@@ -89,7 +89,7 @@
                                     Register
                                 </button>
 
-                                <button type="button" class="btn">
+                                <button type="button" class="btn" onclick="clear()">
                                     Clear
                                 </button>
                             </div>

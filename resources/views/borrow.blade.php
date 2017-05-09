@@ -1,40 +1,47 @@
-<html>
-<head>
-@extends('layouts.master')
 
-@section('content')
-</head>
+
+
+  @include('layouts._head')
 <body>
+  @include('layouts._nav')
+  <div id="mainBody">
+  	<div class="container">
+  	<div class="row">
+  @include('layouts._sidebar')
 
-
-    <div class="row">
+  <div class="span9">
+    <div class="well well-small">
+      <div class="row-fluid">
       <table class="table">
         <thead>
           <tr>
-            <th>No.</th>
-            <th>Username</th>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Book</th>
-            <th>Borrow-Date</th>
-            <th>Return-Date</th>
-            <th>Penalty</th>
+            <th>User_ID</th>
+            <th>Book_ID</th>
+            <th>Loan Date</th>
+            <th>Returned Date</th>
+            <th>Total</th>
           </tr>
         </thead>
         <tbody>
+          @foreach ($loan as $l)
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{ $l->user_id }}</td>
+            <td>{{ $l->book_id }}</td>
+            <td>{{ $l->loan_date }}</td>
+            <td>{{ $l->returned_date }}</td>
+            <td>{{ $l->total }}</td>
           </tr>
+              @endforeach
         </tbody>
       </table>
     </div>
-@endsection
-</body>
-  </html>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+    @include('layouts._footer')
+ <!-- Placed at the end of the document so the pages load faster ============================================= -->
+ 	 @include('layouts._script')
+ </body>

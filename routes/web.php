@@ -23,9 +23,6 @@ Route::get('login', function () {
     return view('/login');
 });
 
-Route::get('borrow', function () {
-    return view('/borrow');
-});
 
 Route::get('contact', function () {
     return view('/contact');
@@ -57,6 +54,7 @@ Route::get('master',function(){
   return view('layouts.master');
 });
 
+Route::get('/profile', 'UserController@index');
 // Route::get('/home', 'HomeController@index');
 
 Auth::routes();
@@ -68,6 +66,8 @@ Route::get('/info', function () {
 
 Route::get('manage-vue', 'VuePromotionController@manageVue');
 Route::resource('vuepromotions','VuePromotionController');
+
+Route::get('borrow', "BorrowController@show");
 
 
 Route::get('all', function () {
