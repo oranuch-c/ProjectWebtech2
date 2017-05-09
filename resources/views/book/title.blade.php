@@ -10,6 +10,67 @@
 
    <div class="col-lg-12 margin-tb">
         <div class="span20 " id="vue-app">
+
+        <div class="row">
+            <div class="col-lg-12 margin-tb">
+                <div class="pull-right">
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#create-promotion">
+          <span class="glyphicon-plus"></span>
+                  Add Book
+                </button>
+                </div>
+            </div>
+        </div>
+        <!-- Create Item Modal -->
+        <div class="modal fade" id="create-promotion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">Add Book</h4>
+              </div>
+              <div class="modal-body span10">
+
+                    <form method="POST" enctype="multipart/form-data" v-on:submit.prevent="createPromotion">
+
+                        <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" name="title" class="form-control" v-model="newPromotion.title" />
+
+                        <label for="author">Author:</label>
+                        <input type="text" name="author" class="form-control" v-model="newPromotion.author" />
+
+                        <label for="date">Date:</label>
+                        <input type="date" name="date" class="form-control" v-model="newPromotion.date" />
+
+                        <label for="description">Description:</label>
+                        <textarea name="description" class="form-control" v-model="newPromotion.description"></textarea>
+
+                        <label for="price">Price:</label>
+                        <input type="text" name="price" class="form-control" v-model="newPromotion.price" />
+
+                        <label for="publish">Publisher:</label>
+                        <input type="text" name="publish" class="form-control" v-model="newPromotion.publish" />
+
+                        <label for="size">Page size:</label>
+                        <input type="text" name="size" class="form-control" v-model="newPromotion.size" />
+
+                        <!-- <span v-if="formErrors['title']" class="error text-danger">@{{ formErrors['title'] }}</span> -->
+                    </div>
+
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+
+                    </form>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
             <div class="panel-heading ">
                 Data Render By Blade
             </div>
