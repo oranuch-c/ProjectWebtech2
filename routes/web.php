@@ -23,9 +23,6 @@ Route::get('login', function () {
     return view('/login');
 });
 
-Route::get('borrow', function () {
-    return view('/borrow');
-});
 
 Route::get('contact', function () {
     return view('/contact');
@@ -51,6 +48,9 @@ Route::get('components', function () {
     return view('/components');
 });
 
+Route::get('voucher', function () {
+    return view('/voucher');
+});
 
 
 Route::get('master',function(){
@@ -74,7 +74,11 @@ Route::resource('vuepromotions','VuePromotionController');
 Route::get('all', function () {
     return view('book.show');
 });
-
+Route::get('product_details',function(){
+  return view('/product_details');
+});
+Route::get('product_details/{id}','ProductController@show');
+Route::get('borrow','BorrowController@show');
 Route::get('categories', 'BookController@index');
 Route::get('titles', 'TitleController@index');
 Route::get('search', 'TitleController@search');
