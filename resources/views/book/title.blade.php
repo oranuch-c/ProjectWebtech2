@@ -3,10 +3,7 @@
     @include('layouts._head')
 <body>
     @include('layouts._nav')
-<<<<<<< HEAD
 
-=======
->>>>>>> showBook
 
 <h1 class="title">All Books</h1>
 <div class="row">
@@ -46,7 +43,7 @@
                         <td>{{ $d->year }}</td>
                         <td>{{ $d->pageSize }}</td>
                         <td>{{ $d->publishComp }}</td>
-                        <td style="width: 5%"><img style="width: 100%" src= "{{ asset('img/'.$d->img) }}"></td>
+                        <td style="width: 10%"><img style="width: 100%" src= "{{ asset('img/'.$d->img) }}"></td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -55,7 +52,6 @@
     </div>
 
 </div>
-<<<<<<< HEAD
 
 
 <!-- MainBody End ============================= -->
@@ -66,16 +62,7 @@
 
 </body>
 </html>
-=======
->>>>>>> showBook
 
-<!-- MainBody End ============================= -->
-<!-- Footer ================================================================== -->
-    @include('layouts._footer')
-<!-- Placed at the end of the document so the pages load faster ============================================= -->
-    @include('layouts._script')
-</body>
-</html>
 @section('script')
 <script>
 

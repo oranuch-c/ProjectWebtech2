@@ -20,8 +20,7 @@ class ProductController extends Controller
     }
     public function show($id)
     {
-        echo $id;
-
-        return view('product_details', compact('id'));
+        $book = DB::table('books')->where('id', $id)->get();
+        return view('product_details', ['book'=>$book]);
     }
 }
