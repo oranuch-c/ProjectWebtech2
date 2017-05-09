@@ -3,7 +3,10 @@
     @include('layouts._head')
 <body>
     @include('layouts._nav')
+<<<<<<< HEAD
 
+=======
+>>>>>>> showBook
 
 <h1 class="title">All Books</h1>
 <div class="row">
@@ -52,6 +55,7 @@
     </div>
 
 </div>
+<<<<<<< HEAD
 
 
 <!-- MainBody End ============================= -->
@@ -62,7 +66,16 @@
 
 </body>
 </html>
+=======
+>>>>>>> showBook
 
+<!-- MainBody End ============================= -->
+<!-- Footer ================================================================== -->
+    @include('layouts._footer')
+<!-- Placed at the end of the document so the pages load faster ============================================= -->
+    @include('layouts._script')
+</body>
+</html>
 @section('script')
 <script>
 
