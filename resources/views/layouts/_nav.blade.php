@@ -30,10 +30,9 @@
 		  <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
     </form>
     <ul id="topMenu" class="nav pull-right">
-	 <li class=""><a href="/special_offer">Specials Offer</a></li>
-	 <li class=""><a href="/contact">Contact</a></li>
+	 <li class=""><a href="/manage-vue">Promotion</a></li>
 	 <li class=""><a href="/borrow">Borrow</a></li>
-	 <li class=""><a href="/titles">Book</a></li>
+	 <li class=""><a href="/contact">Contact</a></li>
 	 <li class="">
 		 @if (Route::has('login'))
 	             @if (Auth::check())

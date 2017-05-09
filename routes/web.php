@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('/index');
 });
 
 Route::get('register', function () {
@@ -52,6 +52,11 @@ Route::get('components', function () {
 
 Route::get('master',function(){
   return view('layouts.master');
+});
+
+
+Route::get('info',function(){
+  return view('/info');
 });
 
 Route::get('/profile', 'UserController@index');
