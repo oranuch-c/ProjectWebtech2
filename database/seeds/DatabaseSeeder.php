@@ -92,7 +92,7 @@ class DatabaseSeeder extends Seeder
                     'year' =>'24 ม.ค. 2560',
                     'pageSize' =>"603 หน้า",
                     'publishComp' =>'รัชนีกานต์',
-                    'img' =>'5.jpg'
+                    'img' =>'5.png'
                 ]),
                             new App\Book([
                     'name' => "นิยายสั้นสุดมันส์ เรื่องสั้นอันตราย2",
