@@ -22,7 +22,6 @@ class CreateUsersTable extends Migration
             $table->date('birthdate');
             $table->string('address');
             $table->Integer('point');
-            $table->string('type');
             $table->string('img');
             $table->rememberToken();
             $table->timestamps();

@@ -28,9 +28,6 @@ Route::get('contact', function () {
     return view('/contact');
 });
 
-Route::get('index', function () {
-    return view('/index');
-});
 
 Route::get('product_details', function () {
     return view('/product_details');
@@ -57,10 +54,16 @@ Route::get('master',function(){
   return view('layouts.master');
 });
 
-Route::get('/profile', 'UserController@index');
-// Route::get('/home', 'HomeController@index');
-
 Auth::routes();
+Route::get('/index', 'HomeController@index');
+
+  Route::prefix('admin')->group(function() {
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+    Route::get('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
+  });
+
+
 Route::get('/info', 'InfoController@index');
 Route::get('/info', function () {
   						$books = ['book1', 'book2', 'book3', 'book4', 'book5'];
@@ -85,3 +88,11 @@ Route::get('search', 'TitleController@search');
 Route::get('index', 'ProductController@index');
 Route::get('/product_details/{id}','ProductController@show');
 // Route::get('all', 'TitleController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

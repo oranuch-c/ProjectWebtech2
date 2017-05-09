@@ -40,7 +40,7 @@
 	             @if (Auth::check())
 	          				<a href="/info" role="button" data-toggle="modal" style="padding-right:0">
 											<span class="btn btn-large btn-success">
-												{{ Auth::user()->name }} (member)
+												{{ Auth::user()->name }} (admin)
 											</span>
 										</a>
 	             @else
